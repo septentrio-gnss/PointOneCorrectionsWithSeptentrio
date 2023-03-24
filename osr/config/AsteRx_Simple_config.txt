@@ -1,0 +1,2 @@
+setDataInOut, OTG1, , SBF
+setSBFOutput, Stream1, , PVTGeodetic, msec1000
