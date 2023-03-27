@@ -105,7 +105,7 @@ The implementation of this service is based and tested on a specific setup. This
 
 <div align="center">
     
-| <a href="https://github.com/IkerUranga10/SeptentrioAgnostic#set-up-guide-to-use-third-party-osr-and-ssr-corrections-with-septentrios-receivers-for-precise-positioning"> Click here to acces to the Set Up Guide to use Third Party OSR and SSR correction services with Septentrio's Receivers for precise positioning.</a> |
+| <a href="https://github.com/septentrio-gnss/Septentrio_AgnosticCorrectionsProgram#set-up-guide-to-use-third-party-osr-and-ssr-corrections-with-septentrios-receivers-for-precise-positioning"> Click here to acces to the Set Up Guide to use Third Party OSR and SSR correction services with Septentrio's Receivers for precise positioning.</a> |
 |---|
     
 </div>
@@ -118,7 +118,7 @@ To implement OSR Corrections in the setup mentioned previously, chech the follow
 
 <div align="center">
 
-| <a href="https://github.com/IkerUranga10/PointOneCorrectionsWithSeptentrio/tree/master/osr#using-septentrios-receiver-and-point-ones-osr-corrections-for-precise-positioning">Using Septentrio's Receiver and Point One's OSR corrections for precise positioning.</a> |
+| <a href="https://github.com/septentrio-gnss/PointOneCorrectionsWithSeptentrio/tree/master/osr#using-septentrios-receiver-and-point-ones-osr-corrections-for-precise-positioning">Using Septentrio's Receiver and Point One's OSR corrections for precise positioning.</a> |
 |---|
 
 Also check Point One's Service Portal:
