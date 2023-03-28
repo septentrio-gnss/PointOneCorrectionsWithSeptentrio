@@ -75,7 +75,7 @@ Polaris enables positioning accuracy of better than 10cm (95%) in open sky. Inte
 Their service is multi constellation and Connectivity agnostic.
 
 The service supports two mechanisms for communication:
-   * Option 1: NTRIP (OSR protocol), thanks to this you can connect to the service without any external library or CPU since Septentrio receivers have an NTRIP client embedded in their Software.
+   * Option 1: NTRIP (OSR protocol), you can connect to the service without any external library using this option since Septentrio receivers have an NTRIP client embedded in their Software.
    * Option 2: Polaris protocol, which requires using the open source Polaris library run in an external CPU (e.g. Raspberry Pi)
 
 
