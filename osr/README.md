@@ -31,7 +31,7 @@ This set of guidelines consist of a several practical examplse to help Septentri
 
 It is desirable to mention the disclaimer about that setup and the guides in general before starting reading this guide.
   
-| <a href="https://github.com/septentrio-gnss/SeptentrioAgnostic/tree/main/Receiver%20and%20Raspberry%20Setup#disclaimer">Click here to know more about the Setup in which these guides are based and general implementation documentation disclaimer</a> |
+| <a href="https://github.com/septentrio-gnss/Septentrio_AgnosticCorrectionsProgram/tree/main/Receiver%20and%20Raspberry%20Setup#disclaimer">Click here to know more about the Setup in which these guides are based and general implementation documentation disclaimer</a> |
 |---|
 
 </div>
@@ -53,7 +53,7 @@ It is desirable to mention the disclaimer about that setup and the guides in gen
     * [Polaris Requirements](#polaris-requirements)
     * [Building Polaris From Source with CMake](#building-polaris-from-source-with-cmake)
     * [Running Polaris Client Example With Serial Port](#running-polaris-client-example-with-serial-port)
-        * [Verifying corrections with PolarisClient](#verifying-corrections-with-polarisClient)
+        * [Verifying corrections with PolarisClient](#verifying-corrections-with-polarisclient)
     * [Running Polaris Client Example With NTRIP](#running-polaris-client-example-with-ntrip)
 
 <!--te-->
@@ -103,7 +103,7 @@ For the setup of Raspberry Pi and Septentrio Receiver, please follow this guide:
 
 <div align="center">
 
-| <a href="https://github.com/septentrio-gnss/SeptentrioAgnostic/tree/main/Receiver%20and%20Raspberry%20Setup#set-up-guide-to-use-third-parties-corrections-with-septentrios-receiver-for-precise-positioning">Set Up Guide to use Third parties corrections with Septentrio's Receiver for precise positioning</a> |
+| <a href="https://github.com/septentrio-gnss/Septentrio_AgnosticCorrectionsProgram/tree/main/Receiver%20and%20Raspberry%20Setup#set-up-guide-to-use-third-parties-corrections-with-septentrios-receiver-for-precise-positioning">Set Up Guide to use Third parties corrections with Septentrio's Receiver for precise positioning</a> |
 |---|
    
 </div>
@@ -131,7 +131,7 @@ Please keep in mind that all explanations are based on the setup described in th
 
 <div align="center">
 
-| <a href="https://github.com/septentrio-gnss/SeptentrioAgnostic/tree/main/Receiver%20and%20Raspberry%20Setup#set-up-guide-to-use-third-parties-corrections-with-septentrios-receiver-for-precise-positioning">Set Up Guide to use Third parties corrections with Septentrio's Receiver for precise positioning</a> |
+| <a href="https://github.com/septentrio-gnss/Septentrio_AgnosticCorrectionsProgram/tree/main/Receiver%20and%20Raspberry%20Setup#set-up-guide-to-use-third-parties-corrections-with-septentrios-receiver-for-precise-positioning">Set Up Guide to use Third parties corrections with Septentrio's Receiver for precise positioning</a> |
 |---|
    
 </div>
