@@ -58,10 +58,10 @@ It is desirable to mention the disclaimer about that setup and the guides in gen
 
 <!--te-->
 
-## POLARIS API
-
+# IMPLEMENTATION SPECIFICATIONS
+## The Polaris Corrections Service
 <p align="center">
-    <img src="doc_resources/polaris.png" width="65%">
+    <img src="doc_resources/polaris.png" width="65%"> </p>
 
 Polaris is Point One Navigation's cloud based correction service for both GNSS and Climate data. Use this API for getting correction data to your GNSS receiver including our development kits, Point One Certified Partner chips, or other standards compliant GNSS receivers.
 
@@ -70,6 +70,48 @@ Point One’s Polaris network is a proprietary GNSS and pressure correction netw
 Polaris enables positioning accuracy of better than 10cm (95%) in open sky. Integrity is a major component of the design and it remains affordable enough to be used in mass market applications.
 
 Their service is multi constellation and Connectivity agnostic.
+
+The service supports two mechanisms for communication:
+   * Option 1: NTRIP (OSR protocol), thanks to this you can connect to the service without any external library or CPU since Septentrio receivers have an NTRIP client embedded in their Software.
+   * Option 2: Polaris protocol, which requires using the open source Polaris library run in an external CPU (e.g. Raspberry Pi)
+
+
+## Option 1: Using NTRIP on board the Septentrio receiver  
+Besides Polaris protocol, PointOne also supports NTRIP. Luckily all Septentrio receivers support NTRIP and have an NTRIP client embedded in the GNSS receiver. This can be accessed via the web-user interface. 
+
+A guide on how to use NTRIP in Septentrio receivers can be found here:
+
+<div align="center">
+    
+| <a href="https://customersupport.septentrio.com/s/article/How-to-receive-corrections-via-NTRIP"> Click here to see how to use NTRIP with Septentrio receivers.</a> |
+|---|
+    
+</div>
+
+
+The mosaic receiver will need access to internet access in order to work properly. 
+If connected to a PC you can enable internet access using the following guide:
+
+<div align="center">
+    
+| <a href="https://customersupport.septentrio.com/s/article/Internet-Over-USB"> Click here to see how share internet access from your PC to the receiver.</a> |
+|---|
+    
+</div>
+
+If connected to a Raspberry Pi, then you can share internet access using the following guide:
+<div align="center">
+    
+| <a href="https://github.com/septentrio-gnss/Septentrio_AgnosticCorrectionsProgram#rtklib-str2str-tool-compilation-and-use-guide"> Click here to see how share internet access from your PC to the receiver.</a> |
+|---|
+    
+</div>
+
+
+## Option 2: Using a Raspberry Pi and the Polaris library and API
+### POLARIS API
+
+The Polaris API is a Point One Software library which allows connection to the Polaris Server. It has the advantages that it might support other data services in the future and is also optimized for communications. In this case the library needs to be run in an external CPU, as example in a Raspberry Pi. The instructions below help to understand how this protocol is implemented.
 
 <div align="center">
 
@@ -82,9 +124,9 @@ The official Point One Navigation Polaris Service repository supported by <a hre
 
     https://github.com/PointOneNav/polaris
 
-## IMPLEMENTATION SPECIFICATIONS
+ 
 
-### Raspberry Pi and Septentrio Receivers
+#### Raspberry Pi and Septentrio Receivers
 
 For this implementation a Raspberry PI 4 Model B with 4 GB of RAM has been used. The use of another model of Raspberry PI should work but has not been tested, although the use of the this model is recommended.
 
@@ -108,11 +150,11 @@ For the setup of Raspberry Pi and Septentrio Receiver, please follow this guide:
    
 </div>
 
-### Polaris Release
+#### Polaris Release version
 
 **Note:** For this implementation the **Release v1.3.0** (Sep 17, 2021 Update) has been used.
 
-## General flowchart and architecture schemes
+### General flowchart and architecture schemes
 
 In general, the operation of the system that implements the Polaris library for obtaining the corrections, consists of the Polaris library running inside the Raspberry Pi and performing the relevant communications to get the position of the receiver to the Polaris server, so that once it has the position it is able to send the appropriate corrections to the receiver.
 
@@ -174,28 +216,27 @@ If you are using the serial communication protocol over the USB cable, Polaris u
 The image below shows a schematic diagram of something level in which the different elements of the system and the type of information exchanged between them appear.
 
 <p align="center">
-    <img src="doc_resources/OSR_Point_One_Polaris_Serial.jpg" width="100%">
+    <img src="doc_resources/OSR_Point_One_Polaris_Serial.jpg" width="100%"> </p>
     
 The following image shows a simplification of the previous scheme and its objective is to show which protocols and communication channels are used to communicate the elements that form the system.
     
 <p align="center">
-    <img src="doc_resources/OSR_Point_One_Polaris_Serial_Simple.jpg" width="100%">
+    <img src="doc_resources/OSR_Point_One_Polaris_Serial_Simple.jpg" width="100%"> </p>
     
 ### Using NTRIP
-    
 In case the NTRIP protocol is being used, Polaris incorporates an NTRIP Server / Caster, which in this case is in charge of communicating with the NTRIP client that the Septentrio modules incorporate inside. 
     
 <p align="center">
-    <img src="doc_resources/OSR_Point_One_Polaris_NTRIP.jpg" width="100%">
-
+    <img src="doc_resources/OSR_Point_One_Polaris_NTRIP.jpg" width="100%"> </p>
+ 
 The following image shows a simplification of the previous scheme and its objective is to show which protocols and communication channels are used to communicate the elements that form the system.
     
 <p align="center">
-    <img src="doc_resources/OSR_Point_One_Polaris_NTRIP_Simple.jpg" width="100%">
+    <img src="doc_resources/OSR_Point_One_Polaris_NTRIP_Simple.jpg" width="100%"> </p>
     
-### Connection to Polaris Server
+#### Connection to Polaris Server
 
-## Corrections with Polaris and Septentrio Receiver
+### Corrections with Polaris and Septentrio Receiver
 
 ### Polaris Requirements
 
