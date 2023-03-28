@@ -40,21 +40,24 @@ It is desirable to mention the disclaimer about that setup and the guides in gen
 
 <!--ts-->
 
-* [Polaris API](#polaris-api)
-    * [Implementation specifications](#implementation-specifications)
-        * [Raspberry Pi and Septentrio Receivers](#raspberry-pi-and-septentrio-receivers)
-        * [Polaris Release](#polaris-release)
-* [General flowchart and architecture schemes](#General-flowchart-and-architecture-schemes)  
-    * [Information exchange formats between the receiver and the Raspberry Pi 4](#information-exchange-formats-between-the-receiver-and-the-raspberry-pi-4) 
-    * [Using Serial communication](#using-serial-communication)
-    * [Using NTRIP](#using-ntrip)
-    * [Connection to Polaris Server](#connection-to-polaris-server)
-* [Corrections with Polaris and Septentrio Receiver](#corrections-with-polaris-and-septentrio-receiver)
-    * [Polaris Requirements](#polaris-requirements)
-    * [Building Polaris From Source with CMake](#building-polaris-from-source-with-cmake)
-    * [Running Polaris Client Example With Serial Port](#running-polaris-client-example-with-serial-port)
-        * [Verifying corrections with PolarisClient](#verifying-corrections-with-polarisclient)
-    * [Running Polaris Client Example With NTRIP](#running-polaris-client-example-with-ntrip)
+* [The Polaris Corrections Service](#the-polaris-corrections-service)
+* [Option 1: Using NTRIP on board the Septentrio receivers](option-1-using-ntrip-on-board-the-septentrio-receivers)
+* [Option 2: Using a Raspberry Pi and the Polaris library API](option-2-using-a-raspberry-pi-and-the-polaris-library-api)
+   * [Polaris API](#polaris-api)
+      * [Implementation specifications](#implementation-specifications)
+         * [Raspberry Pi and Septentrio Receivers](#raspberry-pi-and-septentrio-receivers)
+         * [Polaris Release](#polaris-release)
+   * [General flowchart and architecture schemes](#General-flowchart-and-architecture-schemes)  
+      * [Information exchange formats between the receiver and the Raspberry Pi 4](#information-exchange-formats-between-the-receiver-and-the-raspberry-pi-4) 
+      * [Using Serial communication](#using-serial-communication)
+      * [Using NTRIP](#using-ntrip)
+      * [Connection to Polaris Server](#connection-to-polaris-server)
+   * [Corrections with Polaris and Septentrio Receiver](#corrections-with-polaris-and-septentrio-receiver)
+      * [Polaris Requirements](#polaris-requirements)
+      * [Building Polaris From Source with CMake](#building-polaris-from-source-with-cmake)
+      * [Running Polaris Client Example With Serial Port](#running-polaris-client-example-with-serial-port)
+         * [Verifying corrections with PolarisClient](#verifying-corrections-with-polarisclient)
+      * [Running Polaris Client Example With NTRIP](#running-polaris-client-example-with-ntrip)
 
 <!--te-->
 
@@ -76,7 +79,7 @@ The service supports two mechanisms for communication:
    * Option 2: Polaris protocol, which requires using the open source Polaris library run in an external CPU (e.g. Raspberry Pi)
 
 
-## Option 1: Using NTRIP on board the Septentrio receiver  
+## Option 1: Using NTRIP on board the Septentrio receivers  
 Besides Polaris protocol, PointOne also supports NTRIP. Luckily all Septentrio receivers support NTRIP and have an NTRIP client embedded in the GNSS receiver. This can be accessed via the web-user interface. 
 
 A guide on how to use NTRIP in Septentrio receivers can be found here:
@@ -108,7 +111,7 @@ If connected to a Raspberry Pi, then you can share internet access using the fol
 </div>
 
 
-## Option 2: Using a Raspberry Pi and the Polaris library and API
+## Option 2: Using a Raspberry Pi and the Polaris library API
 ### POLARIS API
 
 The Polaris API is a Point One Software library which allows connection to the Polaris Server. It has the advantages that it might support other data services in the future and is also optimized for communications. In this case the library needs to be run in an external CPU, as example in a Raspberry Pi. The instructions below help to understand how this protocol is implemented.
