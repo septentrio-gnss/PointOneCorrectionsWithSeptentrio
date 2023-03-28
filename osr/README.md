@@ -131,8 +131,7 @@ Please keep in mind that all explanations are based on the setup described in th
 
 <div align="center">
 
-| <a href="https://github.com/
-Uranga10/SeptentrioAgnostic/tree/main/Receiver%20and%20Raspberry%20Setup#set-up-guide-to-use-third-parties-corrections-with-septentrios-receiver-for-precise-positioning">Set Up Guide to use Third parties corrections with Septentrio's Receiver for precise positioning</a> |
+| <a href="https://github.com/septentrio-gnss/SeptentrioAgnostic/tree/main/Receiver%20and%20Raspberry%20Setup#set-up-guide-to-use-third-parties-corrections-with-septentrios-receiver-for-precise-positioning">Set Up Guide to use Third parties corrections with Septentrio's Receiver for precise positioning</a> |
 |---|
    
 </div>
